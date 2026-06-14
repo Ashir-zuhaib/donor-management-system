@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
@@ -245,7 +245,7 @@ export default function DonationWizard({
         <Card>
           <CardHeader>
             <CardTitle>Your Donation Details</CardTitle>
-            <p className="text-sm text-gray-500 capitalize">{form.donationType?.replace(/_/g, ' ')}{selectedCampaign ? ` — ${selectedCampaign.title}` : ''}</p>
+            <p className="text-sm text-gray-500 capitalize">{form.donationType?.replace(/_/g, ' ')}{selectedCampaign ? ` â€” ${selectedCampaign.title}` : ''}</p>
           </CardHeader>
           <CardContent className="space-y-5">
             {isStudentFee ? (
@@ -271,14 +271,14 @@ export default function DonationWizard({
                     >
                       <option value="">Let Madarsa allocate to any needy student</option>
                       {students.map((s) => (
-                        <option key={s.id} value={s.id}>{s.name} (Class {s.class_level || '—'}) — {formatPKR(s.monthly_fee)}/month</option>
+                        <option key={s.id} value={s.id}>{s.name} (Class {s.class_level || 'â€”'}) â€” {formatPKR(s.monthly_fee)}/month</option>
                       ))}
                     </select>
                     <p className="text-xs text-gray-400 mt-1">The Madarsa may allocate funds to any deserving student if you leave this blank.</p>
                   </div>
                   <div className="mt-4 p-3 bg-white rounded-lg border">
                     <div className="flex justify-between text-sm">
-                      <span>{form.studentCount} student(s) × {form.monthsCount} month(s) × {formatPKR(getMonthlyFee())}</span>
+                      <span>{form.studentCount} student(s) Ã— {form.monthsCount} month(s) Ã— {formatPKR(getMonthlyFee())}</span>
                       <span className="font-bold text-emerald-600">{formatPKR(totalStudentAmount)}</span>
                     </div>
                   </div>
@@ -378,7 +378,7 @@ export default function DonationWizard({
                 <p className="font-semibold text-red-800 mb-2">JazzCash Transfer</p>
                 <p className="text-sm text-red-700">Send <strong>{formatPKR(donationAmount)}</strong> to:</p>
                 <p className="text-lg font-mono font-bold text-red-800 mt-1">0300-1234567</p>
-                <p className="text-xs text-red-600 mt-2">Account Name: Al-Noor Masjid</p>
+                <p className="text-xs text-red-600 mt-2">Account Name: Suleimaniyyah Masjid</p>
                 <p className="text-xs text-gray-500 mt-2">After sending, click "I Have Sent the Payment" below. Our admin will verify and confirm your donation.</p>
               </div>
             )}
@@ -388,7 +388,7 @@ export default function DonationWizard({
                 <p className="font-semibold text-green-800 mb-2">EasyPaisa Transfer</p>
                 <p className="text-sm text-green-700">Send <strong>{formatPKR(donationAmount)}</strong> to:</p>
                 <p className="text-lg font-mono font-bold text-green-800 mt-1">0345-9876543</p>
-                <p className="text-xs text-green-600 mt-2">Account Name: Al-Noor Masjid</p>
+                <p className="text-xs text-green-600 mt-2">Account Name: Suleimaniyyah Masjid</p>
                 <p className="text-xs text-gray-500 mt-2">After sending, click "I Have Sent the Payment" below. Our admin will verify and confirm your donation.</p>
               </div>
             )}
@@ -396,7 +396,7 @@ export default function DonationWizard({
             {form.paymentMethod === 'card' && (
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 space-y-3">
                 <p className="font-semibold text-blue-800">Card Payment (Demo)</p>
-                <p className="text-xs text-blue-600">This is a demo — no real charge will be made.</p>
+                <p className="text-xs text-blue-600">This is a demo â€” no real charge will be made.</p>
                 <Input placeholder="Card Number: 1234 5678 9012 3456" disabled />
                 <div className="grid grid-cols-2 gap-3">
                   <Input placeholder="MM/YY" disabled />

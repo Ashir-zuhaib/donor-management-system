@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
@@ -52,7 +52,7 @@ export default async function HomePage() {
               </Button>
             </Link>
             <Link href="/campaigns">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8">
+              <Button size="lg" variant="outline" className="border-white text-white bg-transparent hover:bg-white/10 px-8">
                 View Campaigns
               </Button>
             </Link>
@@ -158,7 +158,7 @@ export default async function HomePage() {
         <div className="max-w-5xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-3">
             <Heart className="w-5 h-5 text-emerald-400" />
-            <span className="font-bold text-white">Al-Noor Masjid & Madarsa</span>
+            <span className="font-bold text-white">Suleimaniyyah Masjid & Madarsa</span>
           </div>
           <p className="text-sm text-gray-400">All donations are used for the betterment of the community. May Allah accept your sadaqah.</p>
           <div className="mt-4 flex justify-center gap-6 text-sm">

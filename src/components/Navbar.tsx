@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -27,7 +27,7 @@ export default function Navbar({ userRole }: { userRole?: string | null }) {
             <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
               <Heart className="w-4 h-4 text-white" />
             </div>
-            <span>Al-Noor Portal</span>
+            <span>Suleimaniyyah Masjid Portal</span>
           </Link>
 
           {/* Desktop nav */}

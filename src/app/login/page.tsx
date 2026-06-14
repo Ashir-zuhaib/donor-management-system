@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { Suspense, useState } from 'react'
 import Link from 'next/link'
@@ -74,7 +74,7 @@ export default function LoginPage() {
             <Heart className="w-6 h-6 text-white" />
           </div>
           <CardTitle>Sign In</CardTitle>
-          <p className="text-sm text-gray-500">Al-Noor Donation Portal</p>
+          <p className="text-sm text-gray-500">Suleimaniyyah Masjid Portal</p>
         </CardHeader>
         <CardContent>
           <Suspense fallback={<div className="h-48 animate-pulse bg-gray-100 rounded-lg" />}>

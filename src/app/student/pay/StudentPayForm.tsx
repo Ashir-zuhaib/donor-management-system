@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useEffect } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
@@ -112,14 +112,14 @@ export default function StudentPayForm({ student, paidKeys }: { student: Student
           <Link href="/student/dashboard"><Button variant="outline" size="sm"><ChevronLeft className="w-4 h-4" /></Button></Link>
           <div className="flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-blue-600" />
-            <span className="font-semibold">Pay Fee — {student.name}</span>
+            <span className="font-semibold">Pay Fee â€” {student.name}</span>
           </div>
         </div>
       </header>
 
       <div className="max-w-2xl mx-auto px-4 py-8 space-y-5">
         <Card>
-          <CardHeader><CardTitle className="text-base">Select Month(s) to Pay — {currentYear}</CardTitle></CardHeader>
+          <CardHeader><CardTitle className="text-base">Select Month(s) to Pay â€” {currentYear}</CardTitle></CardHeader>
           <CardContent>
             <div className="grid grid-cols-4 sm:grid-cols-6 gap-2">
               {Array.from({ length: 12 }, (_, i) => i + 1).map((m) => {
@@ -140,7 +140,7 @@ export default function StudentPayForm({ student, paidKeys }: { student: Student
                     }`}
                   >
                     {MONTHS[m - 1].slice(0, 3)}
-                    {alreadyPaid && <span className="block text-[10px]">✓ Paid</span>}
+                    {alreadyPaid && <span className="block text-[10px]">âœ“ Paid</span>}
                   </button>
                 )
               })}
@@ -177,18 +177,18 @@ export default function StudentPayForm({ student, paidKeys }: { student: Student
               <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-sm">
                 <p className="font-semibold text-red-800 mb-1">JazzCash Transfer</p>
                 <p className="text-red-700">Send <strong>{formatPKR(totalAmount)}</strong> to: <strong className="font-mono">0300-1234567</strong></p>
-                <p className="text-xs text-gray-500 mt-1">Account: Al-Noor Madarsa. Click submit after sending.</p>
+                <p className="text-xs text-gray-500 mt-1">Account: Suleimaniyyah Madarsa. Click submit after sending.</p>
               </div>
             )}
             {paymentMethod === 'easypaisa' && (
               <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-sm">
                 <p className="font-semibold text-green-800 mb-1">EasyPaisa Transfer</p>
                 <p className="text-green-700">Send <strong>{formatPKR(totalAmount)}</strong> to: <strong className="font-mono">0345-9876543</strong></p>
-                <p className="text-xs text-gray-500 mt-1">Account: Al-Noor Madarsa. Click submit after sending.</p>
+                <p className="text-xs text-gray-500 mt-1">Account: Suleimaniyyah Madarsa. Click submit after sending.</p>
               </div>
             )}
             {paymentMethod === 'card' && (
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-xs text-blue-600">Demo card — no real charge will be made.</div>
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-xs text-blue-600">Demo card â€” no real charge will be made.</div>
             )}
             <Button
               className="w-full bg-blue-600 hover:bg-blue-700"
