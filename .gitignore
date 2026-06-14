@@ -33,9 +33,12 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# Supabase migrations contain private schema — keep out of public repo
+supabase/migrations/
+
 # vercel
 .vercel
-
+SETUP.md
 # typescript
 *.tsbuildinfo
 next-env.d.ts
